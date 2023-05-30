@@ -1,0 +1,10 @@
+A = [-1 2; -3 -4]; % State-space matrix A
+B = [1 2; 3 4]; % State-space matrix B (2 inputs)
+C = [1 2; 3 4]; % State-space matrix C (2 outputs)
+D = [0 0; 0 0]; % State-space matrix D
+sys = ss(A,B,C,D); % Create state-space model
+tf_sys1 = tf(sys(1,1)); % Convert input 1-output 1 to transfer function
+tf_sys2 = tf(sys(1,2)); % Convert input 1-output 2 to transfer function
+tf_sys3 = tf(sys(2,1)); % Convert input 2-output 1 to transfer function
+tf_sys4 = tf(sys(2,2)); % Convert input 2-output 2 to transfer function
+tf_sys = [tf_sys1 tf_sys2; tf_sys3 tf_sys4] % MIMO transfer function

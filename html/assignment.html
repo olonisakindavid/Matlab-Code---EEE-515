@@ -1,0 +1,218 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>assignment</title><meta name="generator" content="MATLAB 9.10"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-11-15"><meta name="DC.source" content="assignment.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1></h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">STUDENT DETAILS</a></li><li><a href="#2">ASSIGNMENT ANSWER</a></li></ul></div><h2 id="1">STUDENT DETAILS</h2><p><b>NAME: ODUFEKO TOLUWANIMI MATRIC NUMBER: 18CK024229 PROGRAME: ELECTRICAL &amp; ELECTRONICS ENGINEERING DEPARTMENT: ELECTRICAL &amp; INFORMATION ENGINEERING COURSE: EEE515</b></p><h2 id="2">ASSIGNMENT ANSWER</h2><p>MATLAB CODE TO CALCULATE THE LINE VOLTAGES Vbc AND Vca</p><pre class="codeinput">Ea=1 + 0i;
+Z1= 0.25i; Z2=0.35i; Z0=0.1i;
+<span class="comment">% Assuming the fault occurs at phase'a', the positive sequence component of</span>
+<span class="comment">% current in the 'a' phase(for a single line to ground fault without</span>
+<span class="comment">% impedance)</span>
+Ia1=(Ea/(Z1+Z2+Z0));
+<span class="comment">%Also,for a single line to ground fault,Ia1=Ia2=Ia0</span>
+Ia2=Ia1;
+Ia0=Ia1;
+<span class="comment">%Als, fault current in phase 'a',Ia=Ia1+Ia2+Ia0</span>
+Ia=3*(Ia1);
+<span class="comment">%From the positive sequence network</span>
+Va1=Ea-(Ia1*Z1);
+<span class="comment">%From the negative sequence network</span>
+Va2=-Ia2*Z2;
+<span class="comment">%From the zero sequence network</span>
+Va0=-Ia0*Z0;
+<span class="comment">%For operator 'a' i.e. an operator which causes a rotation of 120 degrees</span>
+<span class="comment">%in the anticlockwise direction.</span>
+a=pol2cart(1,((pi/180)*120));
+<span class="comment">%If Va1,Vb1 and Vc1 are the positive sequence component of the unbalanced</span>
+<span class="comment">%voltages,</span>
+Vb1=a^2*Va1;
+<span class="comment">%If Va2,Vb2 and Vc2 are the negative sequence component of the unbalanced</span>
+<span class="comment">%voltages</span>
+Vb2=a*Va2;
+<span class="comment">%If Va0,Vb0 and Vc0 are the negative sequence component of the unbalanced</span>
+
+<span class="comment">%voltages</span>
+Vb0=Va0;
+Vc0=Va0;
+Vc1=a* Va1;
+Vc2=a^2*Va2;
+Vb=Vb1+Vb2+Vb0;
+Vc= Vc1+ Vc2+Vc0;
+Va=0;
+
+<span class="comment">% P.U values</span>
+<span class="comment">%put values of line voltages'</span>
+Vab=Va-Vb;
+Vab_mag = abs(Vab);
+
+Vca=Vc-Va;
+Vca_mag = abs(Vca);
+
+Vbc=Vb-Vc;
+Vbc_mag = abs(Vbc);
+
+<span class="comment">%assuming a base voltage value of 22kv...V_pu = (V_actual/V_base)</span>
+
+<span class="comment">% Actual values</span>
+<span class="comment">%actual values of line voltages</span>
+V_base = 22000;
+
+Vab_actual = V_base * Vab_mag
+
+Vbc_actual = V_base * Vbc_mag
+
+Vca_actual = V_base * Vca_mag
+</pre><pre class="codeoutput">
+Vab_actual =
+
+   2.5199e+03
+
+
+Vbc_actual =
+
+   3.7444e+03
+
+
+Vca_actual =
+
+   1.2246e+03
+
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2021a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+
+%% STUDENT DETAILS
+% *NAME: ODUFEKO TOLUWANIMI
+% MATRIC NUMBER: 18CK024229
+% PROGRAME: ELECTRICAL & ELECTRONICS ENGINEERING
+% DEPARTMENT: ELECTRICAL & INFORMATION ENGINEERING
+% COURSE: EEE515*
+
+
+%% ASSIGNMENT ANSWER
+% MATLAB CODE TO CALCULATE THE LINE VOLTAGES Vbc AND Vca
+
+Ea=1 + 0i; 
+Z1= 0.25i; Z2=0.35i; Z0=0.1i; 
+% Assuming the fault occurs at phase'a', the positive sequence component of 
+% current in the 'a' phase(for a single line to ground fault without 
+% impedance) 
+Ia1=(Ea/(Z1+Z2+Z0)); 
+%Also,for a single line to ground fault,Ia1=Ia2=Ia0 
+Ia2=Ia1; 
+Ia0=Ia1; 
+%Als, fault current in phase 'a',Ia=Ia1+Ia2+Ia0 
+Ia=3*(Ia1); 
+%From the positive sequence network  
+Va1=Ea-(Ia1*Z1); 
+%From the negative sequence network  
+Va2=-Ia2*Z2; 
+%From the zero sequence network 
+Va0=-Ia0*Z0; 
+%For operator 'a' i.e. an operator which causes a rotation of 120 degrees 
+%in the anticlockwise direction. 
+a=pol2cart(1,((pi/180)*120)); 
+%If Va1,Vb1 and Vc1 are the positive sequence component of the unbalanced 
+%voltages, 
+Vb1=a^2*Va1; 
+%If Va2,Vb2 and Vc2 are the negative sequence component of the unbalanced 
+%voltages 
+Vb2=a*Va2; 
+%If Va0,Vb0 and Vc0 are the negative sequence component of the unbalanced 
+
+%voltages 
+Vb0=Va0; 
+Vc0=Va0; 
+Vc1=a* Va1; 
+Vc2=a^2*Va2; 
+Vb=Vb1+Vb2+Vb0; 
+Vc= Vc1+ Vc2+Vc0; 
+Va=0; 
+
+% P.U values
+%put values of line voltages'
+Vab=Va-Vb; 
+Vab_mag = abs(Vab);
+
+Vca=Vc-Va; 
+Vca_mag = abs(Vca);
+
+Vbc=Vb-Vc; 
+Vbc_mag = abs(Vbc);
+
+%assuming a base voltage value of 22kv...V_pu = (V_actual/V_base)
+
+% Actual values
+%actual values of line voltages
+V_base = 22000;
+
+Vab_actual = V_base * Vab_mag
+
+Vbc_actual = V_base * Vbc_mag
+
+Vca_actual = V_base * Vca_mag
+##### SOURCE END #####
+--></body></html>
